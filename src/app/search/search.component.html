@@ -1,0 +1,50 @@
+
+<div class="description">
+    <form >
+        <mat-form-field class="input1">
+            <mat-label>Search Employee By Email</mat-label>
+            <input [formControl]="myControl" matInput type="text" placeholder="Search By FirstName" [matAutocomplete] = "auto" />
+            <mat-autocomplete #auto = "matAutocomplete">
+                <mat-option *ngFor="let item of filteredOptions | async" [value] = "item" >{{item}}</mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <button class="btn btn-outline-success" type="button" (click)="findUser()">Search</button>
+    </form>
+    <!--<div class="row col-md-6">
+        <div class="div1" id="custom-search-input">
+            <input class="input1" type="text"  placeholder="Search With mail" name="email" [(ngModel)]="email"/>
+            <button class="btn btn-outline-success" type="button" (click)="findUserByEmailId()">Search</button>
+        </div>
+    </div>-->
+    <table class="table table-striped custab ">
+    <thead >
+        <tr>
+            <th>Id</th>
+            <th>FisrtName</th>
+            <th>LastName</th>
+            <th>DOB</th>
+            <th>mobileNo</th>
+            <th>Email</th>
+            <th>Experience</th>
+            <th>Domain</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.firstname}}</td>
+            <td>{{employee.lastname}}</td>
+            <td>{{employee.dob}}</td>
+            <td>{{employee.mobileno}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.experience}}</td>
+            <td>{{employee.domain}}</td>
+        </tr>
+    </tbody>
+    </table>
+     
+</div>
+
+
+
+

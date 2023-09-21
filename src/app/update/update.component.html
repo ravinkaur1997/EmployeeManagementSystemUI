@@ -1,0 +1,58 @@
+
+<form class="container col-sm-5 description">
+    <fieldset class="row">
+        <h6>{{message}}</h6>
+        <div class="form-group row">
+            <h4 class=col-sm-10>Edit Details</h4>
+            <button class="btn btn-outline-info col-sm-2 pull-right" type="button" routerLink="/profile" name="back">Back</button>
+            
+        </div>
+        <hr>
+        <div class="form-group">
+            <label for="Name"> FirstName: </label>
+            <input required type="text" [(ngModel)]="employee.firstname" name="firstname"
+                class="form-control phone" maxlength="28" placeholder="Enter your firstname..." />
+        </div>
+        <div class="form-group">
+            <label for="Name"> LastName: </label>
+            <input required type="text" [(ngModel)]="employee.lastname" name = "lastname"
+                class="form-control phone" maxlength="28" placeholder="Enter your lastname..." />
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4"> Email: </label>
+            <label class="col-sm-4">{{employee.email}}</label>
+            
+        </div>
+        <div class="form-group col-sm-6">
+            <label for="DOB"> Date of Birth: </label>
+            <input class="form-control" type="date" [(ngModel)]="employee.dob" name="dob" required
+                placeholder="Enter Date of Birth" />
+            
+        </div>
+        <div class="form-group col-sm-6">
+            <label for="mobileno"> Mobile No: </label>
+            <input class="form-control" type="text" [(ngModel)]="employee.mobileno" name="mobileno" required
+                placeholder="Enter valid mobile no" />
+            
+        </div>
+
+        <div class="form-group">
+            <label for="exp"> Experience : </label>
+            <input class="form-control" type="text" [(ngModel)]="employee.experience" name="experience"
+                placeholder="Total year of experience" required /> 
+        </div>
+
+        <div class="form-group">
+            <label for="email"> Domain: </label>
+            <input class="form-control" required type="text" [(ngModel)]="employee.domain" name="domain"
+               placeholder="fullstack/backend/developer" />
+            <div class="status" id="status"></div>
+        </div>
+        <div class="form-group text-center">
+            <input class="btn btn-outline-success" type="submit" name="submit_reg" value="conform" (click)="update()">
+        </div>
+        
+    </fieldset>
+</form>
+
+

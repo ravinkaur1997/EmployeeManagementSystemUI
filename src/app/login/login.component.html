@@ -1,0 +1,96 @@
+<!-- <form [formGroup]="form" class="col-sm-3 description">
+    
+    <fieldset>
+        <h6 >{{message}}</h6>
+        <h3 class="form-group title">Sign in</h3>
+        <hr>
+         <div class="form-group">
+            <label for="email"> Email: </label>
+            <input class="form-control" type="email" placeholder="Enter valid email address"
+                formControlName="email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+            </div>
+        </div>
+        <div class="form-group ">
+            <label for="password"> Password: </label>
+            <input type="password" class="form-control phone" maxlength="28" placeholder="Enter password"
+                formControlName="password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                <div *ngIf="f['password'].errors['required']">Password is required</div>
+                <div *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters</div>
+                <div *ngIf="f['password'].errors['maxlength']">password must not exceed 40 characters</div>
+            </div>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+        </div> 
+        <div class="form-group div1">
+            <label  for="username">username:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter your mail Id..."
+                formControlName="email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                    <div *ngIf="f['email'].errors['required']">Email is required</div>
+                    <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="form-group div1 inner-addon right-addon">
+            <label>Password: </label>
+            <div class="input-group mx-auto">
+                <input name="password" [type]="showPassword ? 'text' : 'password'" class="form-control" placeholder="Password"
+                  formControlName="password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+                <i class="bi bi-eye far" (click)="showPassword = !showPassword" [class.hide]="!showPassword"></i>
+                <i class="bi bi-eye-slash far" (click)="showPassword = !showPassword" [class.hide]="showPassword"></i> 
+                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                    <div *ngIf="f['password'].errors['required']">Password is required</div>
+                    <div *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters</div>
+                    <div *ngIf="f['password'].errors['maxlength']">password must not exceed 20 characters</div>
+                </div>
+            </div>
+            
+          </div>
+       
+        <div class="form-group title" >
+            <input class="btn btn-outline-success" type="submit" name="login" value="login" (click)="login()"><span>&nbsp;&nbsp;</span>
+            <input class="btn btn-outline-primary" type="reset" name="reset" (click)="onReset()">
+        </div>
+        
+    </fieldset>
+</form> -->
+<form [formGroup]="form" class="container col-sm-4 description">
+    <fieldset class="row">
+        <h6>{{message}}</h6>
+        <div class="form-group row">
+            <h4 class="col-sm-10">Sign In</h4>
+            <button class="btn btn-outline-info col-sm-2 pull-right" routerLink='/home' type="button" name="back">Back</button>
+        </div>
+        <hr>
+        <div class="form-group">
+            <label for="Name">UserName: </label>
+            <input type="text" class="form-control phone" maxlength="28" placeholder="Enter your mail id..."
+                formControlName="username" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
+            <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+                <div *ngIf="f['username'].errors['required']">Username is required</div>
+                <!-- <div *ngIf="f['username'].errors['minlength']">Username must be at least 6 characters</div> -->
+                <div *ngIf="f['username'].errors['email']">Enter valid mail Id</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password: </label>
+            <input type="password" class="form-control phone" maxlength="28"  placeholder="Enter your password.."
+                formControlName="password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                <div *ngIf="f['password'].errors['required']">Password is required</div>
+                <div *ngIf="f['password'].errors['minlength']">Password must be at least 3 characters</div>
+                <div *ngIf="f['password'].errors['maxlength']">password must not exceed 20 characters</div>
+            </div>
+        </div>
+        <div class="form-group title" >
+            <input class="btn btn-outline-success" type="submit" name="login" value="login" (click)="login()"><span>&nbsp;&nbsp;</span>
+            <input class="btn btn-outline-primary" type="reset" name="reset" (click)="onReset()">
+        </div>
+    </fieldset>
+</form>

@@ -1,0 +1,35 @@
+<div class="description">
+    <div class="row col-md-6 ">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>DOB</th>
+            <th>mobileNo</th>
+            <th>Email</th>
+            <th>Experience</th>
+            <th>Domain</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.firstname}}</td>
+            <td>{{employee.lastname}}</td>
+            <td>{{employee.dob}}</td>
+            <td>{{employee.mobileno}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.experience}}</td>
+            <td>{{employee.domain}}</td>
+            <td class="text-center"><button class="btn btn-outline-danger" (click)="deleteEmp(employee.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
+          </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+
+
+

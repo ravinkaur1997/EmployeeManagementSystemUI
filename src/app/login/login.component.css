@@ -1,0 +1,47 @@
+.hide {
+    display: none;
+  }
+  
+  .inner-addon .far {
+    position: absolute;
+    padding: 5px 10px;
+    z-index: 100;
+    cursor: pointer;
+  }
+  .left-addon .far  { left:  0px; }
+  .right-addon .far { right: 0px; }
+   
+  .left-addon input  { padding-left:  10px; }
+  .right-addon input { padding-right: 10px; }
+
+fieldset {
+    border: thin solid rgb(19, 165, 233); 
+    border-radius: 6px;
+    padding: 20px;
+    background: #fbfbfb;
+}
+.title
+{
+    text-align: center;
+    padding: 20px;
+}
+
+.div1
+{
+    padding: 10px;
+}
+.description {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -55%);
+	min-width: 300px;
+}
+
+.form-group
+{
+    padding: 10px;
+}
+
+
+

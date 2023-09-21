@@ -1,0 +1,15 @@
+fieldset {
+    border: thin solid rgb(19, 165, 233); 
+    border-radius: 6px;
+    padding: 20px;
+    background: #fbfbfb;
+}
+
+.description {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -55%);
+	min-width: 300px;
+    text-align: center;
+}

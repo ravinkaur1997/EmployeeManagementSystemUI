@@ -1,0 +1,91 @@
+
+
+
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+
+.input1
+{
+  min-width: 300px;
+  padding: 5px;
+}
+
+.table
+{
+  background-color: antiquewhite;
+  min-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#custom-search-input {
+  margin:10px;
+  min-width: 800px;
+  margin-top: 24px;
+  padding: 2px;
+}
+
+#custom-search-input .search-query {
+  padding-right: 3px;
+  padding-right: 4px \9;
+  padding-left: 3px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  width: 700px;
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 43px;
+}
+
+
+
+.search-query:focus + button {
+  z-index: 3;  
+}
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  padding-right: 0px;
+  padding-left: 183px;
+}
+
+.description {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -55%);
+	text-align: center;
+}
+
+@media (max-width: 575.98px) {
+    .description {
+        left: 0;
+        padding: 0 15px;
+        position: absolute;
+        top: 10%;
+        transform: none;
+        text-align: center;
+    }
+ 
+    .description h1 {
+        font-size: 2em;
+    }
+ 
+    .description p {
+        font-size: 1.2rem;
+    }
+ 
+    .features {
+        margin: 0;
+    }
+}

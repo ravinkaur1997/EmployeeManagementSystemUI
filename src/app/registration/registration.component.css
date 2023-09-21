@@ -1,0 +1,20 @@
+
+fieldset {
+    border: thin solid rgb(32, 143, 233); 
+    border-radius: 5px;
+    padding: 20px;
+    background: #fbfbfb;
+}
+
+
+.description {
+	position:absolute;
+    left:30%;
+    top: 5%;
+}
+.form-group
+{
+    padding: 5px;
+}
+
+
